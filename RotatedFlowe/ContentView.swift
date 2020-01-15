@@ -14,28 +14,28 @@ struct ContentView: View {
             Circle()
             .stroke()
                 .frame(width: 75, height: 75 )
-                .opacity(0.4)
-            RoundedRect()
+                .opacity(0.1)
+            CardPicture()
                 .foregroundColor(Color.blue)
-            RoundedRect()
+            CardPicture()
                 .foregroundColor(Color.yellow)
                  .rotationEffect(.degrees(45))
-            RoundedRect()
+            CardPicture()
                 .foregroundColor(Color.pink)
                  .rotationEffect(.degrees(90))
-            RoundedRect()
+            CardPicture()
             .foregroundColor(Color.blue)
             .rotationEffect(.degrees(135))
-            RoundedRect()
+            CardPicture()
                 .foregroundColor(Color.green)
                 .rotationEffect(.degrees(180))
-            RoundedRect()
+            CardPicture()
                 .foregroundColor(Color.green)
                 .rotationEffect(.degrees(225))
-            RoundedRect()
+            CardPicture()
                  .foregroundColor(Color.orange)
                  .rotationEffect(.degrees(270))
-            RoundedRect()
+            CardPicture()
                  .foregroundColor(Color.red)
                  .rotationEffect(.degrees(315))
 
@@ -50,6 +50,26 @@ struct RoundedRect: View {
             .offset(y: 50)
             .frame(width: 50, height: 78)
             .opacity(0.6)
+    }
+}
+
+struct CardPicture: View {
+    var body: some View {
+        ZStack {
+        Rectangle()
+            .offset(y: 150)
+            .frame(width: 40, height: 200)
+            .opacity(0.2)
+        .cornerRadius(5)
+            
+        Image(systemName: "person.fill")
+            .resizable()
+            .frame(width:20 , height:20 )
+            .offset(y:75 )
+            
+       
+       
+    }
     }
 }
 
